@@ -1,0 +1,56 @@
+﻿@model ProgrammersBlog.WebMvc.Models.ArticleDetailViewModel
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_ArticleLayout.cshtml";
+    ViewBag.Title = Model.ArticleDto.Article.Title;
+    ViewBag.Description = Model.ArticleDto.Article.SeoDescription;
+    ViewBag.Author = Model.ArticleDto.Article.SeoAuthor;
+    ViewBag.Tags = Model.ArticleDto.Article.SeoTags;
+}
+
+
+<div class="col-lg-8">
+
+    <!-- Title -->
+    <h1 class="mt-4">@Model.ArticleDto.Article.Title</h1>
+
+    <!-- Author -->
+    <p class="lead">
+        @Model.ArticleDto.Article.User.UserName tarafından @Model.ArticleDto.Article.Date.Value.ToShortDateString() tarihinde paylaşılmıştır
+    </p>
+    <hr>
+    <!-- Preview Image -->
+    <div class="text-center">
+        <img class="img-fluid rounded" src="~/img/@Model.ArticleDto.Article.Thumbnail" alt="@Model.ArticleDto.Article.Title">
+    </div>
+
+    <hr>
+
+    <!-- Post Content -->
+
+    @Html.Raw(Model.ArticleDto.Article.Content)
+    <hr>
+
+    <p class="text-center">Okunma Sayısı : <span class="badge badge-info">@Model.ArticleDto.Article.ViewsCount</span> Yorum Sayısı: <span class="badge badge-warning">@Model.ArticleDto.Article.CommentsCount</span></p>
+
+    <!-- Comments Form -->
+    <partial name="~/Views/Comment/_CommentAddPartial.cshtml" model="new ProgrammersBlog.Entities.Dtos.CommentAddDto() { ArticleId = Model.ArticleDto.Article.Id}" />
+    <div id="comments">
+        @foreach (var comment in Model.ArticleDto.Article.Comments)
+        {
+            <!-- Single Comment -->
+            <div class="media mb-4">
+                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                <div class="media-body">
+                    <h5 class="mt-0">@comment.CreatedByName</h5>
+                    @comment.Text
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+<partial name="_ArticleDetailRightSideBarPartial" model="@Model.ArticleRightSidebarViewModel" />
+@section Scripts {
+    <script src="~/BlogHome/js/articleDetail.js"></script>
+}

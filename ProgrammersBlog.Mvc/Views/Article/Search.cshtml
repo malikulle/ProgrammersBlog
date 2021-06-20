@@ -1,0 +1,108 @@
+﻿@model ProgrammersBlog.WebMvc.Models.ArticleSearchViewModel
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Title = "Arama Sonuçları";
+    var regex = new System.Text.RegularExpressions.Regex("<[^>]*>");
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-md-8">
+
+    <h1 class="my-4">
+        Arama Sonuçları
+    </h1>
+
+    <form>
+        <div class="form-row">
+            <input type="hidden" id="keyword" value="@Model.Keyword" />
+            <input type="hidden" id="current-page" value="@Model.ArticleListDto.CurrentPage" />
+            <div class="form-group col-md-6">
+                <select class="form-control" id="select-page-size">
+                    <option selected="@(Model.ArticleListDto.PageSize == 3 ? "selected" :null)" value="3">3</option>
+                    <option selected="@(Model.ArticleListDto.PageSize == 5 ? "selected" :null)" value="5">5</option>
+                    <option selected="@(Model.ArticleListDto.PageSize == 10 ? "selected" :null)" value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <select class="form-control" id="select-is-asceding">
+                    <option selected="@(Model.ArticleListDto.IsAscending == false ? "selected" :null)" value="false">En Yeni</option>
+                    <option selected="@(Model.ArticleListDto.IsAscending == true ? "selected" :null)" value="true">En Eski</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    @foreach (var article in Model.ArticleListDto.Articles)
+    {
+        <!-- Blog Post -->
+        <div class="card mb-4">
+            <img class="card-img-top" src="~/img/@article.Thumbnail" alt="@article.Title">
+            <div class="card-body">
+                <h2 class="card-title">@article.Title</h2>
+                <p class="card-text">
+                    @{
+                        article.Content = regex.Replace(article.Content, "");
+                    }
+                    @(article.Content.Length > 150 ? article.Content.Substring(0, 250) : article.Content)
+                </p>
+                <a asp-controller="Article" asp-action="Detail" asp-route-articleId="@article.Id" class="btn btn-primary">Daha Fazla Oku &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+                @article.User.UserName tarafından @article.Date tarihinde paylaşıldı.
+            </div>
+        </div>
+    }
+
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+
+        @if (Model.ArticleListDto.ShowPrevious)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-controller="Home" asp-action="Index" asp-route-isAscending="@Model.ArticleListDto.IsAscending" asp-route-currentPage="@(Model.ArticleListDto.CurrentPage-1)" asp-route-keyword="@Model.Keyword">Önceki</a>
+            </li>
+        }
+
+        @for (int i = 1; i <= Model.ArticleListDto.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.ArticleListDto.CurrentPage ? "active" : "")">
+                <a class="page-link" asp-controller="Home" asp-action="Index" asp-route-isAscending="@Model.ArticleListDto.IsAscending" asp-route-currentPage="@i" asp-route-keyword="@Model.Keyword">@i</a>
+            </li>
+
+        }
+        @if (Model.ArticleListDto.ShowNext)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-controller="Home" asp-action="Index" asp-route-currentPage="@(Model.ArticleListDto.CurrentPage+1)" asp-route-keyword="@Model.Keyword">Sonraki</a>
+            </li>
+        }
+
+    </ul>
+
+</div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $(function () {
+                var selectedPageSize = $("#select-page-size");
+                var selectIsAsc = $("#select-is-asceding");
+                var keyword = $("#keyword").val();
+                var currentPage = $("#current-page").val();
+
+                var keywordQuery = keyword != null ? `&keyword=${keyword}` : '';
+
+                selectedPageSize.on("change", function () {
+                    window.location = `/?pageSize=${selectedPageSize.val()}&currentPage=${currentPage}&isAscending=${selectIsAsc.val()}${keywordQuery}`
+                })
+                selectIsAsc.on("change", function () {
+                    window.location = `/?pageSize=${selectedPageSize.val()}&currentPage=${currentPage}&isAscending=${selectIsAsc.val()}${keywordQuery}`
+                })
+            });
+        });
+    </script>
+}

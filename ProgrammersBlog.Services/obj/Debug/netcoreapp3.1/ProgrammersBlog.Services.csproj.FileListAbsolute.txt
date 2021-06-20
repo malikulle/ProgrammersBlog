@@ -1,0 +1,16 @@
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Services.deps.json
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Services.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Services.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.csprojAssemblyReference.cache
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.AssemblyInfoInputs.cache
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.AssemblyInfo.cs
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.csproj.CoreCompileInputs.cache
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Data.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Data.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Entities.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\bin\Debug\netcoreapp3.1\ProgrammersBlog.Shared.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Services\obj\Debug\netcoreapp3.1\ProgrammersBlog.Services.csproj.CopyComplete

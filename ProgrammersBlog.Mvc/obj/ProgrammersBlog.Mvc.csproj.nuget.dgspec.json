@@ -1,0 +1,56 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\malik\\source\\repos\\ProgrammersBlog\\ProgrammersBlog.Mvc\\ProgrammersBlog.Mvc.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\malik\\source\\repos\\ProgrammersBlog\\ProgrammersBlog.Mvc\\ProgrammersBlog.Mvc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\malik\\source\\repos\\ProgrammersBlog\\ProgrammersBlog.Mvc\\ProgrammersBlog.Mvc.csproj",
+        "projectName": "ProgrammersBlog.Mvc",
+        "projectPath": "C:\\Users\\malik\\source\\repos\\ProgrammersBlog\\ProgrammersBlog.Mvc\\ProgrammersBlog.Mvc.csproj",
+        "packagesPath": "C:\\Users\\malik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malik\\source\\repos\\ProgrammersBlog\\ProgrammersBlog.Mvc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\malik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 17.2\\Components\\System\\Components\\packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net50": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net50": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

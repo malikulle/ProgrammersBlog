@@ -1,0 +1,15 @@
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\bin\Debug\netcoreapp5.0\ProgrammersBlog.Entities.deps.json
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\bin\Debug\netcoreapp5.0\ProgrammersBlog.Entities.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\bin\Debug\netcoreapp5.0\ref\ProgrammersBlog.Entities.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\bin\Debug\netcoreapp5.0\ProgrammersBlog.Entities.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\bin\Debug\netcoreapp5.0\ProgrammersBlog.Shared.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\bin\Debug\netcoreapp5.0\ProgrammersBlog.Shared.pdb
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.csprojAssemblyReference.cache
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.AssemblyInfoInputs.cache
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.AssemblyInfo.cs
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.csproj.CoreCompileInputs.cache
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.csproj.CopyComplete
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ref\ProgrammersBlog.Entities.dll
+C:\Users\malik\source\repos\ProgrammersBlog\ProgrammersBlog.Entities\obj\Debug\netcoreapp5.0\ProgrammersBlog.Entities.pdb

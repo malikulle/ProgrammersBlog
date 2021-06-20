@@ -1,0 +1,90 @@
+﻿@model ArticleListDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+
+<ol class="breadcrumb mb-3 mt-2">
+    <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a></li>
+    <li class="breadcrumb-item active"><a asp-area="Admin" asp-controller="Article" asp-action="Index">Makaleler</a></li>
+</ol>
+
+<div class="card mb-4 mt-2">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+        Makaleler
+    </div>
+    <div class="card-body">
+        <div class="spinner-border" role="status" style="display:none;">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="article-table" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Kategori</th>
+                        <th>Başlık</th>
+                        <th>Küçük Resim</th>
+                        <th>Tarih</th>
+                        <th>Okunma Sayısı</th>
+                        <th>Yorum Sayısı</th>
+                        <th>Aktif Mi?</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>Kategori</th>
+                        <th>Başlık</th>
+                        <th>Küçük Resim</th>
+                        <th>Tarih</th>
+                        <th>Okunma Sayısı</th>
+                        <th>Yorum Sayısı</th>
+                        <th>Aktif Mi?</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model.Articles)
+                    {
+                        <tr name="@item.Id">
+                            <td>@item.Id</td>
+                            <td>@item.Category.Name</td>
+                            <td>@item.Title</td>
+                            <td>
+                                <img src="~/img/@item.Thumbnail" class="my-image-table" alt=""/>
+                            </td>
+                            <td>@item.Date.Value.ToShortDateString() </td>
+                            <td>@item.ViewsCount</td>
+                            <td>@item.CommentsCount</td>
+                            <td>@(item.IsActive ? "Evet" : "Hayır")</td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Article" asp-action="Update" asp-route-articleId="@item.Id" class="btn btn-primary btn-sm btnUpdate" data-id="@item.Id"><span class="fas fa-edit"></span>Düzenle</a>
+                                <button class="btn btn-danger btn-sm btnDelete" data-id="@item.Id"><span class="fas fa-minus-circle"></span>Sil</button>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+
+    <script src="~/Admin/js/articleIndex.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#btnAdd").click(function() {
+                window.location.href= '@Url.Action("Add","Article")'
+            })
+        })
+    </script>
+}
+
